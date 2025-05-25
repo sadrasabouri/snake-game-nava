@@ -3,11 +3,11 @@
 import time
 import random
 from utils import init_screen, create_head, create_food
-from utils import create_score_display
-from settings import WIDTH, HEIGHT
-from utils import move_snake, update_segments
-from utils import check_wall_collision, check_self_collision
-from utils import check_food_collision, reset_game, add_segment, update_score
+from utils import reset_game 
+from utils import create_score_display, update_score
+from utils import update_segments, add_segment
+from utils import check_wall_collision, check_self_collision, check_food_collision
+from utils import move_snake
 from settings import GAME_RENDER_RATE
 from settings import FOOD_RAND_RANGE, FOOD_SCORE
 
