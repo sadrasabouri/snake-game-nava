@@ -81,7 +81,7 @@ screen.onkeypress(go_right, "Right")
 while True:
     screen.update()
 
-    if check_wall_collision(head) or check_self_collision():
+    if check_wall_collision() or check_self_collision():
         reset_game()
 
     if check_food_collision():

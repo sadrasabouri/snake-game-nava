@@ -7,7 +7,7 @@ from settings import FOOD_COLOR, FOOD_SHAPE
 from settings import SCORE_DISPLAY_FONT, SCORE_DISPLAY_COLOR
 from settings import SCORE_WIDTH, SCORE_HEIGHT
 from settings import SCORE_DISPLAY_FORMAT
-from settings import WIDTH, HEIGHT, DELAY
+from settings import WIDTH, HEIGHT
 
 
 def init_screen() -> turtle.Screen:
