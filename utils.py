@@ -59,8 +59,8 @@ def create_score_display() -> turtle.Turtle:
 
 
 def reset_game(
-        head: turtle.Turtle,
         segments: List[turtle.Turtle],
+        head: turtle.Turtle,
         score: int,
         score_display: turtle.Turtle,
         high_score: int) -> tuple:

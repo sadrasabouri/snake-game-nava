@@ -36,7 +36,7 @@ if __name__ == "__main__":
         screen.update()
 
         if check_wall_collision(head) or check_self_collision(segments, head):
-            segments, score, high_score = reset_game(head, segments, score, score_display, high_score)
+            segments, score, high_score = reset_game(segments, head, score, score_display, high_score)
             continue
 
         if check_food_collision(head, food):
