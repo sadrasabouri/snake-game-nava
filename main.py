@@ -2,6 +2,7 @@
 """Main module."""
 import time
 import random
+import nava
 from utils import init_screen, create_head, create_food
 from utils import reset_game 
 from utils import create_score_display, update_score
@@ -20,6 +21,7 @@ if __name__ == "__main__":
     head = create_head()
     food = create_food()
     score_display = create_score_display()
+    nava.play("sounds/loop.wav", loop=True, async_mode=True)
 
     # Prevents the snake from going back on itself
     def go_up(): head.direction = "up" if head.direction != "down" else None
@@ -36,10 +38,12 @@ if __name__ == "__main__":
         screen.update()
 
         if check_wall_collision(head) or check_self_collision(segments, head):
+            nava.play("sounds/gameover.wav", async_mode=True)
             segments, score, high_score = reset_game(segments, head, score, score_display, high_score)
             continue
 
         if check_food_collision(head, food):
+            nava.play("sounds/point.wav", async_mode=True)
             food.goto(random.randint(*FOOD_RAND_RANGE),
                       random.randint(*FOOD_RAND_RANGE))
             segments = add_segment(segments)
